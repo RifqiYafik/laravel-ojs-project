@@ -60,7 +60,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <div class="d-block">
                                     <label for="password"
                                         class="control-label">Password</label>
@@ -74,7 +74,23 @@
                                 <div class="invalid-feedback">
                                     please fill in your password
                                 </div>
+                            </div> --}}
+
+                            <div class="form-group">
+                                <div class="d-block">
+                                    <label for="password" class="control-label">Password</label>
+                                </div>
+                                <div class="input-group" id="show-hide-password">
+                                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
+                                    <div class="input-group-append">
+                                        <a href="#" class="input-group-text"><i class="fas fa-eye-slash" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="invalid-feedback">
+                                    please fill in your password
+                                </div>
                             </div>
+
 
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox">
@@ -152,6 +168,7 @@
     <!-- Template JS File -->
     <script src="{{ asset('js/scripts.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
+
 </body>
 
 </html>

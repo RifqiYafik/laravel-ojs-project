@@ -49,6 +49,7 @@
 
                 <div class="form-group">
                     <label for="password" class="d-block">Password</label>
+                    <div class="input-group" id="show-hide-password">
                     <input id="password" type="password"
                         class="form-control pwstrength @error('password')
                         is-invalid
@@ -60,6 +61,10 @@
                             {{ $message }}
                         </div>
                     @enderror
+                        <div class="input-group-append">
+                            <a href="#" class="input-group-text"><i class="fas fa-eye-slash" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
                     <div id="pwindicator" class="pwindicator">
                         <div class="bar"></div>
                         <div class="label"></div>
@@ -67,17 +72,23 @@
                 </div>
                 <div class="form-group ">
                     <label for="password2" class="d-block">Password Confirmation</label>
+                    <div class="input-group" id="show-hide-confpassword">
                     <input id="password2" type="password"
                         class="form-control @error('password_confirmation')
                         is-invalid
                     @enderror"
                         name="password_confirmation">
+                        <div class="input-group-append">
+                            <a href="#" class="input-group-text"><i class="fas fa-eye-slash" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
                 </div>
                 @error('password_confirmation')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
                 @enderror
+
 
 
 
